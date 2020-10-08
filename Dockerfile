@@ -2,7 +2,8 @@ FROM balenalib/raspberry-pi-debian:stretch as builder
 
 RUN apt-get update -qy && apt-get -qy install \
         build-essential git nasm \
-        libomxil-bellagio-dev libssl-dev
+        libomxil-bellagio-dev \
+        libssl-dev
 
 WORKDIR /root
 RUN git clone https://github.com/FFmpeg/FFmpeg.git --depth 1
